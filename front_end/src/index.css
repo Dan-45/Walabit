@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Definir los colores exactos del diseño */
+  --color-brand-bg: #030712; /* Un negro/azul muy oscuro */
+  --color-brand-text: #f8fafc; /* Un blanco roto suave */
+  --color-brand-primary: #eab308; /* El amarillo/dorado de los botones */
+  --color-brand-primary-hover: #ca8a04; /* Un tono más oscuro para hover */
+  --color-brand-card: #0f172a; /* Fondo para las cards de "Sobre mí" */
+}
+
+/* Configuración base global */
+body {
+  @apply bg-brand-bg text-brand-text antialiased;
+  font-family: Inter, system-ui, sans-serif;
+}
