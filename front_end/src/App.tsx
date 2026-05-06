@@ -4,6 +4,7 @@ import { SingIn } from './pages/SignIn'
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import './index.css'
+import { AdminDashboard } from './pages/AdminDashboard';
 
 function App() {
   // Obtener la ubicación actual para poder usarla en el Navbar
@@ -11,7 +12,7 @@ function App() {
 
   // 2. Definimos si queremos mostrar el Navbar y Footer
   // Si la ruta es '/login', esta variable será false
-  const showLayout = location.pathname !== '/login';
+  const showLayout = location.pathname !== '/login' && location.pathname !== '/admin'; // También ocultamos en admin
 
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<SingIn />} />
+            <Route path='/admin' element={<AdminDashboard />} />
           </Routes>
         </main>
 

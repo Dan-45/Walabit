@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "../components/Container";
 import type { SingInCredentials } from "../types/auth";
+import { useNavigate } from "react-router-dom";
 
 export const SingIn = () => {
     // 1. Estado del formulario (Preparado para el Back-end)
@@ -9,6 +10,8 @@ export const SingIn = () => {
         password: '',
         rememberMe: false,
     });
+
+    const navigate = useNavigate();
 
     // 2. Manejador de cambios (Input handling)
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,6 +27,7 @@ export const SingIn = () => {
         e.preventDefault();
         console.log("Enviando a la API:", formData);
         // Aquí es donde en el futuro harás: const response = await login(formData);
+        navigate('/admin');
     };
     return (
         <section className="min-h-[80vh] flex items-center justify-center py-12 pt-20">
