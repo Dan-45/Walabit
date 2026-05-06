@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { Container } from './Container';
+
 
 export const Navbar = () => {
   return (
@@ -22,11 +24,11 @@ export const Navbar = () => {
           <a href="#" className="hover:text-brand-primary transition-colors">Servicios</a>
         </div>
 
-        {/* Botón CTA y Menú Móvil */}
+        {/* Botón CTA y Menú Móvil */}  
         <div className="flex items-center gap-3">
-          <button className="hidden sm:block px-5 py-2.5 bg-brand-primary text-slate-950 rounded-full text-sm font-semibold hover:bg-brand-primary-hover transition-colors">
-            Get in touch
-          </button>
+          <Link to="/login" className="hidden sm:block px-5 py-2.5 bg-brand-primary text-slate-950 rounded-full text-sm font-semibold hover:bg-brand-primary-hover transition-colors">
+              Iniciar Sesión
+          </Link>
           
           {/* Icono de Menú para móvil */}
           <button className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white">

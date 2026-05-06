@@ -4,7 +4,7 @@ import reactImage from "../assets/react.svg"
 import viteImage from "../assets/vite.svg"
 import { ServiceCard } from "../components/ServiceCard";
 import { ProjectCard } from "../components/ProjectCard";
-import { Footer } from "../components/Footer";
+
 
 const Homepage = () => {
   return (
@@ -150,11 +150,6 @@ const Homepage = () => {
               />
             </div>
           </div>
-        </Container>
-      </section>
-      <section>
-        <Container>
-          <Footer />
         </Container>
       </section>
     </div>
