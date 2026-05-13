@@ -93,12 +93,12 @@ const Homepage = () => {
             </div>
 
             {/* Input de Buscador */}
-            <div className="relative w-full md:w-64">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+            <div className="relative w-full md:w-64 group">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-brand-primary transition-colors">🔍</span>
               <input
                 type="text"
                 placeholder="Buscar"
-                className="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-full text-sm focus:ring-2 focus:ring-brand-primary outline-none"
+                className="w-full pl-10 pr-4 py-2 bg-slate-100 border border-transparent rounded-full text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 outline-none transition-all"
               />
             </div>
           </div>

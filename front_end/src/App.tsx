@@ -4,7 +4,7 @@ import { SingIn } from './pages/SignIn'
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import './index.css'
-import { AdminDashboard } from './pages/AdminDashboard';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
 
 function App() {
   // Obtener la ubicación actual para poder usarla en el Navbar
@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<SingIn />} />
-            <Route path='/admin' element={<AdminDashboard />} />
+            <Route path='/admin' element={<AdminDashboardPage />} />
           </Routes>
         </main>
 

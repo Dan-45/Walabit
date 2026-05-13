@@ -34,7 +34,7 @@ export const Footer = () => {
           </div>
         </div>
         {/* LÍNEA DIVISORIA */}
-        <div className="w-full h-[1px] bg-slate-200 mb-8" />
+        <div className="w-full h-px bg-slate-200 mb-8" />
         {/* LÍNEA DIVISORIA */}
         <div className="text-center">
           <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-medium">

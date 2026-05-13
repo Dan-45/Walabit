@@ -1,16 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* Definir los colores exactos del diseño */
-  --color-brand-bg: #030712; /* Un negro/azul muy oscuro */
-  --color-brand-text: #f8fafc; /* Un blanco roto suave */
-  --color-brand-primary: #eab308; /* El amarillo/dorado de los botones */
-  --color-brand-primary-hover: #ca8a04; /* Un tono más oscuro para hover */
-  --color-brand-card: #0f172a; /* Fondo para las cards de "Sobre mí" */
+  /* 1. PALETA DE MARCA (Identidad Visual) */
+  --color-brand-bg: #030712;           /* El fondo ultra oscuro de la imagen */
+  --color-brand-card: #0f172a;         /* Gris azulado profundo para las tarjetas */
+  --color-brand-primary: #eab308;      /* El dorado vibrante de tus botones */
+  --color-brand-primary-hover: #ca8a04;
+  --color-brand-text: #f8fafc;
+  --color-brand-muted: #94a3b8;        /* Para textos secundarios */
+
+  /* 2. CONFIGURACIÓN DE TREMOR (Mapeo de Colores) */
+  /* Forzamos a Tremor a usar tu paleta para sus gráficas y componentes */
+  --color-tremor-brand: var(--color-brand-primary);
+  --color-tremor-background: var(--color-brand-card);
+  --color-tremor-border: #1e293b;
+  --color-tremor-content: var(--color-brand-text);
+  
+  /* Colores específicos para Data Visualization (Donut/Bars) */
+  --color-video: #847b11;
+  --color-technical: #eab308;
+  --color-other: #334155; /* Un gris oscuro que resalte en el fondo negro */
+
+  /* 3. TIPOGRAFÍA Y OTROS */
+  --font-sans: "Inter", "system-ui", "sans-serif";
 }
 
-/* Configuración base global */
-body {
-  @apply bg-brand-bg text-brand-text antialiased;
-  font-family: Inter, system-ui, sans-serif;
+/* 4. REGLAS GLOBALES */
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text antialiased;
+  }
+
+  /* Ajuste para que las tablas de Tremor no se vean blancas sobre fondo oscuro */
+  .tremor-base {
+    @apply text-brand-text;
+  }
+}
+
+/* 5. FIX PARA BORDES Y DECORACIONES */
+/* Tremor usa clases específicas que a veces necesitan un empujón en v4 */
+.tremor-card-decoration {
+  background-color: var(--color-brand-primary) !important;
 }

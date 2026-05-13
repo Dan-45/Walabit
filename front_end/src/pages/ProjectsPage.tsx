@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Container } from '../components/Container';
 
 
-export const AdminDashboard = () => {
+export const ProjectsPage = () => {
   return (
     <div className="flex min-h-screen bg-slate-50">
       {/* SIDEBAR - Panel Izquierdo */}
